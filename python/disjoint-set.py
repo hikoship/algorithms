@@ -1,7 +1,7 @@
 class DisjointSet(object):
     def __init__(self, length):
-        self.parent = [i for i in range(length)]
-        self.size = [1 for i in range(length)]
+        self.parent = range(length)
+        self.size = [1] * length
 
     def root(self, i):
         if i != self.parent[i]:
